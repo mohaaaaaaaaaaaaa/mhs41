@@ -24,7 +24,7 @@ nav {
   border-bottom: 1px solid var(--border);
 }
 .nav-logo img {
-  height: 56px
+  height: 56px;
   width: auto;
   display: block;
   background: #F5C400;
