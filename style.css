@@ -24,10 +24,10 @@ nav {
   border-bottom: 1px solid var(--border);
 }
 .nav-logo img {
-  height: 48px;
+  height: 56px
   width: auto;
   display: block;
-  background: #FFFFFF;
+  background: #F5C400;
   border-radius: 8px;
   padding: 4px 8px;
 }
