@@ -133,13 +133,31 @@
     .map-wrapper { border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
     .map-wrapper iframe { display: block; width: 100%; height: 440px; border: none; }
 
+    /* FAQ */
+    .faq-list { max-width: 760px; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .faq-question {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.3rem 0; cursor: pointer;
+      font-size: 0.95rem; font-weight: 500; color: var(--light);
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--yellow); }
+    .faq-icon { font-size: 1.4rem; color: var(--yellow); flex-shrink: 0; margin-left: 1rem; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer { font-size: 0.87rem; line-height: 1.75; color: #777; max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
+    .faq-item.open .faq-answer { max-height: 200px; padding-bottom: 1.2rem; }
+
     /* CONTACT */
     .contact-section { padding: 6rem 2.5rem; text-align: center; background: var(--gray); }
     .contact-phone { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 6vw, 5rem); color: var(--yellow); letter-spacing: 0.08em; display: block; margin: 2rem auto; text-decoration: none; transition: opacity 0.2s; }
     .contact-phone:hover { opacity: 0.75; }
-    .contact-sub { font-size: 0.88rem; color: #555; }
-    .contact-devis { display: inline-block; margin-top: 2rem; border: 1px solid rgba(245,196,0,0.3); color: var(--yellow); padding: 0.7rem 1.8rem; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.2s, color 0.2s; }
-    .contact-devis:hover { background: var(--yellow); color: var(--dark); }
+    .contact-actions { display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .btn-appel { background: var(--yellow); color: var(--dark); text-decoration: none; font-weight: 600; font-size: 0.88rem; padding: 0.8rem 2rem; border-radius: 3px; letter-spacing: 0.03em; transition: opacity 0.2s; }
+    .btn-appel:hover { opacity: 0.85; }
+    .btn-sms { border: 1px solid rgba(245,196,0,0.35); color: var(--yellow); text-decoration: none; font-size: 0.88rem; padding: 0.8rem 2rem; border-radius: 3px; letter-spacing: 0.03em; transition: background 0.2s, color 0.2s; }
+    .btn-sms:hover { background: var(--yellow); color: var(--dark); }
+    .contact-sub { font-size: 0.85rem; color: #555; }
 
     /* FOOTER */
     footer { border-top: 1px solid rgba(255,255,255,0.05); padding: 2rem 2.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: #444; }
@@ -171,6 +189,7 @@
       <li><a href="#infos">Informations</a></li>
       <li><a href="#horaires">Horaires</a></li>
       <li><a href="#localisation">Localisation</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -320,13 +339,68 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="section-label">Questions fréquentes</div>
+    <div class="section-title">FAQ</div>
+    <div class="faq-list">
+      <div class="faq-item fade-in">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Les devis sont-ils gratuits ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Oui, tous nos devis sont gratuits et sans engagement. Nous nous déplaçons pour évaluer vos besoins et vous remettons un devis détaillé avant tout démarrage de travaux.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Intervenez-vous en urgence ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Nous faisons notre possible pour intervenir rapidement en cas de panne électrique. Contactez-nous directement par téléphone pour évaluer les délais selon notre planning du moment.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Travaillez-vous le samedi ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Oui, nous sommes disponibles du lundi au samedi de 8h30 à 17h30 pour s'adapter à vos contraintes professionnelles ou personnelles.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Quelles sont vos garanties sur les travaux ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Tous nos travaux sont couverts par une garantie de 2 ans sur la main d'oeuvre. Nous sommes également assurés en responsabilité civile professionnelle pour vous protéger en toutes circonstances.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Intervenez-vous pour les particuliers et les professionnels ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Oui, nous travaillons aussi bien pour les particuliers (maisons, appartements) que pour les professionnels (bureaux, commerces, locaux industriels).</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Jusqu'où intervenez-vous ?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Notre zone d'intervention couvre Blois et l'ensemble du Loir-et-Cher (41), ainsi que l'Indre-et-Loire (37) jusqu'à Tours. Pour toute demande hors zone, n'hésitez pas à nous contacter.</div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section class="contact-section" id="contact">
     <div class="section-label">Prendre contact</div>
-    <div class="section-title">Appelez-nous</div>
-    <a href="tel:0610386991" class="contact-phone">06 10 38 69 91</a>
-    <p class="contact-sub">Du lundi au samedi, 8h30 à 17h30</p>
-    <a href="tel:0610386991" class="contact-devis">Demander un devis gratuit</a>
+    <div class="section-title">Contactez-nous</div>
+    <div class="contact-buttons">
+      <a href="tel:0610386991" class="contact-phone">06 10 38 69 91</a>
+      <div class="contact-actions">
+        <a href="tel:0610386991" class="btn-appel">Appeler</a>
+        <a href="sms:0610386991" class="btn-sms">Envoyer un SMS</a>
+      </div>
+      <p class="contact-sub">Du lundi au samedi, 8h30 à 17h30 — Devis gratuit</p>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -337,6 +411,13 @@
   </footer>
 
   <script>
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((e, i) => {
         if (e.isIntersecting) {
