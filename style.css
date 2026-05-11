@@ -34,7 +34,7 @@ nav {
 .footer-logo img {
   height: 38px;
   width: auto;
-  background: #FFFFFF;
+  background: #F5C400;
   border-radius: 8px;
   padding: 4px 8px;
 }
@@ -104,7 +104,7 @@ nav {
 .hero-logo-img {
   width: 220px; height: 220px; object-fit: contain;
   position: relative; z-index: 1;
-  background: #1C2B4A;
+  background: #F5C400;
   border-radius: 50%;
   padding: 20px;
 }
