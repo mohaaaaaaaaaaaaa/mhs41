@@ -24,9 +24,19 @@ nav {
   border-bottom: 1px solid var(--border);
 }
 .nav-logo img {
-  height: 52px;
+  height: 48px;
   width: auto;
   display: block;
+  background: #1C2B4A;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+.footer-logo img {
+  height: 38px;
+  width: auto;
+  background: #1C2B4A;
+  border-radius: 8px;
+  padding: 4px 8px;
 }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a {
@@ -91,7 +101,13 @@ nav {
   animation: spin-slow 24s linear infinite reverse;
 }
 @keyframes spin-slow { to { transform: rotate(360deg); } }
-.hero-logo-img { width: 220px; height: 220px; object-fit: contain; position: relative; z-index: 1; }
+.hero-logo-img {
+  width: 220px; height: 220px; object-fit: contain;
+  position: relative; z-index: 1;
+  background: #1C2B4A;
+  border-radius: 50%;
+  padding: 20px;
+}
 
 /* ── SECTIONS ───────────────────────────────────────────────────────────── */
 .section { padding: 6rem 2.5rem; }
@@ -222,7 +238,7 @@ footer {
   display: flex; justify-content: space-between; align-items: center;
   font-size: 0.78rem; color: #444;
 }
-.footer-logo img { height: 38px; width: auto; }
+
 
 /* ── ANIMATIONS ─────────────────────────────────────────────────────────── */
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
